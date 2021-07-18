@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 15px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 600px 600px;
+    grid-template-rows: 350px 350px;
+    grid-template-areas: 
+        "about rated"
+        "testimonials testimonials";
+
+    font-family: 'Spartan';
+}
+
+
+/** About **/
+#about {
+    grid-area: about;
+    padding: 4rem;
+}
+
+#about h1 {
+    color: hsl(300, 43%, 22%);
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+#about p {
+    line-height: 25px;
+    color: hsl(303, 10%, 53%);
+}
+
+
+
+/** Rated **/
+#rated {
+    grid-area: rated;
+    color:hsl(300, 43%, 22%) ;
+    font-weight: bold;
+    line-height: 45px;
+    padding-top: 4rem;
+    padding-left: 2rem;
+}
+
+#rated-1, #rated-2, #rated-3 {
+    display: flex;
+    background-color:  hsl(300, 24%, 96%);
+    border-radius: 10px;
+    width: 400px;
+    margin-top: 15px;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    align-items: center;
+}
+
+#rated-1 p, #rated-2 p, #rated-3 p {
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+#rated-2 {
+    margin-left: 45px;
+}
+
+#rated-3 {
+    margin-left: 90px;
+}
+
+/** Testimonials **/
+#testimonials {
+    grid-area: testimonials;
+    display: flex;
+    flex-direction: row ;
+    padding: 0 4rem 0 4rem;
+}
+
+#testimonials img {
+    border-radius: 50px;
+    width: 40px;
+    margin-right: 20px;
+}
+
+#tt-1, #tt-2, #tt-3 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: hsl(300, 43%, 22%);
+    border-radius: 10px;
+    height: 250px;
+    width: 1000px;
+    padding: 2rem;
+    color: hsl(0, 0%, 100%);
+    font-weight: lighter;
+    font-size: 13px;
+}
+
+#tt-1, #tt-2, #tt-3 p {
+    line-height: 20px;
+}
+
+#verified {
+    color: hsl(333, 80%, 67%);
+}
+
+#tt-2 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#tt-3 {
+    margin-left: 20px;
+    margin-top: 40px;
+}
+
+
+/** Background **/
+
+body {
+    background-image: 
+      url('images/bg-pattern-top-desktop.svg'),
+      url('images/bg-pattern-bottom-desktop.svg');
+    background-position: 
+      right calc(40vw + 10%) bottom calc(95vh - 15vw),
+      left calc(25vw + 10%) top calc(40vh - 10vw);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    overflow-x: hidden;
+    z-index: -1;
+}
+
+
+/** Mobile - responsive **/
+
+@media only screen and (max-width:750px){
+    .container {
+        display: grid;
+        height: 100vh;
+        justify-content: center;
+        align-content: flex-start;
+        grid-template-columns: 600px;
+        grid-template-rows: 350px 350px 800px;
+        grid-template-areas: 
+            "about"
+            "rated"
+            "testimonials";
+        font-family: 'Spartan';
+    }
+
+    #about {
+        grid-area: about;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4rem 0 4rem;
+    }
+
+    #about h1, p {
+        text-align: center;
+    }
+
+    #about p {
+        padding: 0 4rem;
+    }
+
+    #testimonials {
+        grid-area: testimonials;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+
+    #tt-1, #tt-2, #tt-3 {
+        align-items: center;
+        height: 250px;
+        width: 350px;
+        margin: 10px;
+    }
+
+    #rated {
+        grid-area: rated;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 4rem 0 4rem;
+    }
+
+    #rated-1, #rated-2, #rated-3 {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 100px;
+        width: 350px;
+        margin: 10px;
+        line-height: 30px;
+    }
+
+    /** Background **/
+
+    body {
+        background-image: 
+            url('images/bg-pattern-top-desktop.svg'),
+            url('images/bg-pattern-bottom-desktop.svg');
+        background-position: 
+            right calc(10vw + 1%) bottom calc(85vh - 15vw),
+            left calc(20vw + 10%) top calc(100vh - 10vw);
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        overflow-x: hidden;
+        z-index: -1;
+}
+   
+}
