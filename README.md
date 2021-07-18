@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![Here](https://github.com/hemanuela/social-proof-section-master/blob/main/design/myscreenshot.jpg)
 
 
 ### Links
