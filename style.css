@@ -156,6 +156,8 @@ body {
         font-family: 'Spartan';
     }
 
+    
+    /** About **/
     #about {
         grid-area: about;
         display: flex;
@@ -173,6 +175,7 @@ body {
         padding: 0 4rem;
     }
 
+    /** Testimonials **/
     #testimonials {
         grid-area: testimonials;
         flex-direction: column;
@@ -187,7 +190,8 @@ body {
         width: 350px;
         margin: 10px;
     }
-
+    
+    /** Rated **/
     #rated {
         grid-area: rated;
         display: flex;
